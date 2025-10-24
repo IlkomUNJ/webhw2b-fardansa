@@ -1,0 +1,11 @@
+@layout('layouts/app')
+
+@slot('main')
+<div class="text-center">
+  <h1 class="text-3xl font-bold text-indigo-600 mb-8">Choose Your Role</h1>
+  <div class="flex justify-center gap-8">
+    <a href="/login/user" class="bg-indigo-600 text-white px-8 py-4 rounded-lg hover:bg-indigo-700">Login as User</a>
+    <a href="/login/seller" class="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700">Login as Seller</a>
+  </div>
+</div>
+@endslot

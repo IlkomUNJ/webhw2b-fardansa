@@ -1,0 +1,25 @@
+@layout('layouts/app')
+
+@slot('main')
+<h1 class="text-3xl font-bold text-indigo-600 mb-6 text-center">Add New Product</h1>
+
+<form action="/seller/product/store" method="post" class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow">
+  <div class="mb-4">
+    <input type="text" name="name" placeholder="Product Name" required
+      class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-400">
+  </div>
+  <div class="mb-4">
+    <input type="number" name="price" placeholder="Price" required
+      class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-400">
+  </div>
+  <div class="mb-4">
+    <input type="number" name="stock" placeholder="Stock" required
+      class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-400">
+  </div>
+  <div class="mb-4">
+    <input type="text" name="image_url" placeholder="Image URL"
+      class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-400">
+  </div>
+  <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">Save Product</button>
+</form>
+@endslot

@@ -1,0 +1,17 @@
+@layout('layouts/app')
+
+@slot('main')
+<h1 class="text-3xl font-bold text-center text-indigo-600 mb-8">Our Products</h1>
+
+<div class="grid md:grid-cols-3 gap-8">
+  @each(product in products)
+  <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+    <img src="{{ product.imageUrl }}" alt="{{ product.name }}" class="w-full h-48 object-cover rounded mb-4">
+    <h3 class="text-xl font-semibold">{{ product.name }}</h3>
+    <p class="text-gray-600 mb-2">${{ product.price }}</p>
+    <button onclick="addToCart({id: {{ product.id }}, name: '{{ product.name }}', price: {{ product.price }}, imageUrl: '{{ product.imageUrl }}'})"
+      class="bg-indigo-600 text-white w-full py-2 rounded-lg hover:bg-indigo-700 mt-2">Add to Cart</button>
+  </div>
+  @endeach
+</div>
+@endslot

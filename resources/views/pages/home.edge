@@ -1,0 +1,24 @@
+@layout('layouts/app')
+
+@slot('main')
+<section class="text-center">
+  <h1 class="text-4xl font-bold text-indigo-600 mb-4">Turning Your Robots Dreams Into Reality</h1>
+  <p class="text-lg text-gray-600 mb-8">Explore everything the future of robotics has to offer.</p>
+  <a href="/products" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">Explore Now</a>
+</section>
+
+<section class="mt-16 grid md:grid-cols-3 gap-8">
+  <div class="p-6 bg-white shadow rounded-lg">
+    <h3 class="text-xl font-bold mb-2">Innovation</h3>
+    <p class="text-gray-600">We create next-gen robotics solutions for education and industries.</p>
+  </div>
+  <div class="p-6 bg-white shadow rounded-lg">
+    <h3 class="text-xl font-bold mb-2">Technology</h3>
+    <p class="text-gray-600">Harnessing AI, automation, and smart systems for the future.</p>
+  </div>
+  <div class="p-6 bg-white shadow rounded-lg">
+    <h3 class="text-xl font-bold mb-2">Community</h3>
+    <p class="text-gray-600">Empowering hobbyists, learners, and innovators worldwide.</p>
+  </div>
+</section>
+@endslot

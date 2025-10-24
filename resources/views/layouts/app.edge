@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ $title || 'BotBot' }}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold text-blue-600">BotBot</a>
+      <nav class="space-x-6">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <a href="/products" class="hover:text-blue-600">Products</a>
+        <a href="/about" class="hover:text-blue-600">About</a>
+        <a href="/contact" class="hover:text-blue-600">Contact</a>
+      </nav>
+      <a href="/cart" class="relative">
+        <span id="cartCounter" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">0</span>
+        🛒
+      </a>
+    </div>
+  </header>
+
+  <main class="container mx-auto py-8">
+    {{{ await $slots.main() }}}
+  </main>
+
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center mt-10">
+    &copy; 2025 BotBot Inc. All Rights Reserved.
+  </footer>
+
+  <script src="/assets/js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@layout('layouts/app')
+
+@slot('main')
+<section class="max-w-md mx-auto text-center">
+  <h2 class="text-3xl font-bold text-green-600 mb-6">Seller Login</h2>
+  <form action="/login/seller" method="post" class="bg-white p-6 shadow rounded-lg">
+    <input type="text" name="name" placeholder="Enter seller name" required
+      class="w-full border border-gray-300 rounded-lg px-4 py-2 mb-4 focus:ring-2 focus:ring-green-400">
+    <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">Continue</button>
+  </form>
+</section>
+@endslot

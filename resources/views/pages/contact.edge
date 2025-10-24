@@ -1,0 +1,23 @@
+@layout('layouts/app')
+
+@slot('main')
+<section class="max-w-lg mx-auto">
+  <h1 class="text-3xl font-bold text-center text-indigo-600 mb-6">Contact Us</h1>
+
+  <form action="/contact/submit" method="post" class="bg-white p-8 rounded-lg shadow">
+    <div class="mb-4">
+      <input type="text" name="name" placeholder="Your Name" required
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-400">
+    </div>
+    <div class="mb-4">
+      <input type="email" name="email" placeholder="Your Email" required
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-indigo-400">
+    </div>
+    <div class="mb-4">
+      <textarea name="message" placeholder="Your Message" required
+        class="w-full border border-gray-300 rounded-lg px-4 py-2 h-32 focus:ring-2 focus:ring-indigo-400"></textarea>
+    </div>
+    <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">Send Message</button>
+  </form>
+</section>
+@endslot

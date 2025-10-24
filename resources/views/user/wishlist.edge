@@ -1,0 +1,17 @@
+@layout('layouts/app')
+
+@slot('main')
+<h1 class="text-3xl font-bold text-center text-pink-600 mb-8">Your Wishlist</h1>
+
+<div class="grid md:grid-cols-2 gap-6">
+  @each(item in items)
+  <div class="bg-white p-6 rounded-lg shadow flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <img src="{{ item.imageUrl }}" class="w-16 h-16 rounded object-cover">
+      <p class="font-semibold">{{ item.name }}</p>
+    </div>
+    <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Remove</button>
+  </div>
+  @endeach
+</div>
+@endslot
